@@ -33,18 +33,22 @@ public class PrinterTest {
 		visitorLikedLocations.clear();
 	}
 
-	// --------------------------------------------------------------
-	// Tests- Null parameter while creating VisitorIterator Object
-	// --------------------------------------------------------------
+	// ----------------------------------------------------------------------
+	// Tests- Null and valid parameters while creating VisitorIterator Object
+	// ----------------------------------------------------------------------
 		
-	//Test Null Visitor IllegalArgumentException
+	//Test Null Visitor IllegalArgumentException.
+	//When a null is passed in for visitor object
+	//it should throw an IllegalArgumentException.
 	@Test(expected=IllegalArgumentException.class)
 	public void testNullVisitorThrowsIllegalArgumentException(){
 		//Act
 		printer.printVisits("Hello", null, false);
 	}
 	
-	//Test Visitor Object passed does not throw Exception
+	//Test Visitor Object passed does not throw Exception.
+	//When no null and a visitor object is passed in 
+	//it should not throw any exceptions
 	@Test
 	public void testVisitorPassedNoExceptionThrown(){
 		//Act

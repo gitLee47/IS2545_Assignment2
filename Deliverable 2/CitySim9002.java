@@ -10,7 +10,7 @@ public class CitySim9002 {
 		//validate the input and get seed
 		//if validate fails, program will exit
 		Validator validate = new Validator();
-		long seed = validate.ValidateInput(args) ;
+		long seed = validate.validateInput(args) ;
 		
 		IVisitor visitorObj;
 		VisitorIterator visits;

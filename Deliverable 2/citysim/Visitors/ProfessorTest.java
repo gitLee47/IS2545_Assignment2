@@ -27,7 +27,9 @@ public class ProfessorTest {
 		expectedLocations.clear();
 	}
 	
-	//Test to assert liked locations for Professor
+	//Test the liked locations for Professor, should be empty.
+	//This done by calling the getVisitorLikedLocations()
+	//and comparing with an empty array.
 	@Test
 	public void testDefaultLikedLocations() {
 		//Act
@@ -40,7 +42,9 @@ public class ProfessorTest {
 		assertArrayEquals(expectedLocations.toArray(), visitorObj.getVisitorLikedLocations().toArray());
 	}
 	
-	//Test setting and getting of locations for Professor
+	//Test the setters and getters for the liked locations
+	//This done by calling the setVisitorLikedLocations()
+	//and comparing with an empty setVisitorLikedLocations()
 	@Test
 	public void testSetterandGetterLocations() {
 		//Arrange
@@ -54,7 +58,8 @@ public class ProfessorTest {
 		assertArrayEquals(expectedLocations.toArray(), visitorObj.getVisitorLikedLocations().toArray());
 	}
 	
-	//Test the default visitor type for Professor return Professor
+	//Test the visitor type for Professor, should return Professor,
+	//the getVisitorType() method should return the correct type.
 	@Test
 	public void testDefaultVisitorType() {
 			
@@ -62,7 +67,8 @@ public class ProfessorTest {
 		assertEquals("professor".toUpperCase(), visitorObj.getVisitorType().toUpperCase());
 	}
 	
-	//Test default visitor number returns 0
+	//Test default visitor number, should return 0
+	//when calling the getVisitorNumber() method
 	@Test
 	public void testDefaultVisitorNumber() {
 			
@@ -71,6 +77,8 @@ public class ProfessorTest {
 	}
 	
 	//Test visitor number cannot be negative
+	//This is done by input -1 and asserting
+	//that we don't get back -1 with getVisitorNumber()
 	@Test
 	public void testVisitorNumberDoesNotTakeNegativeInput() {
 		//Arrange
@@ -83,7 +91,9 @@ public class ProfessorTest {
 		assertNotEquals(-1, visitorObj.getVisitorNumber());
 	}
 	
-	//Test setting and getting of valid visitor number
+	//Test setting and getting a visitor number
+	//by input 100, which is valid and using the
+	//methods setVisitorNumber() and getVisitorNumber()
 	@Test
 	public void testSetterandGetterVisitorNumber() {
 		//Arrange

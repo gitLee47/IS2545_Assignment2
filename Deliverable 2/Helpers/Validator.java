@@ -3,7 +3,7 @@ package Helpers;
 //This Class is used for validations. 
 public class Validator {
 	//The Input argument for seed can be validated here
-	public long ValidateInput(String args[]){
+	public long validateInput(String args[]){
 		long seed = 0;
 		
 		if(args.length == 1){

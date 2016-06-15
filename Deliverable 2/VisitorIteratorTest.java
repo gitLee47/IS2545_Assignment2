@@ -62,14 +62,18 @@ public class VisitorIteratorTest {
 	// Tests- Null parameter while creating VisitorIterator Object
 	// --------------------------------------------------------------
 	
-	//Test Null City throws IllegalArgumentException
+	//Test Null City throws IllegalArgumentException.
+	//This is tested by passing in null for City object
+	//and keeping all other parameters intact
 	@Test(expected=IllegalArgumentException.class)
 	public void testNullCityThrowsIllegalArgumentException() {
 		//Act
 		new VisitorIterator(seed, null, randMock, printerMock, visitorMock);
 	}
 	
-	//Test Null RandomNumberGenerator IllegalArgumentException
+	//Test Null City throws IllegalArgumentException.
+	//This is tested by passing in null for RandomNumberGenerator object
+	//and keeping all other parameters intact
 	@Test(expected=IllegalArgumentException.class)
 	public void testNullRandomNumberGeneratorThrowsIllegalArgumentException() {
 		//Act
@@ -77,6 +81,8 @@ public class VisitorIteratorTest {
 	}
 	
 	//Test Null Printer IllegalArgumentException
+	//This is tested by passing in null for Printer object
+	//and keeping all other parameters intact
 	@Test(expected=IllegalArgumentException.class)
 	public void testNullPrinterthrowsIllegalArgumentException() {
 		//Act
@@ -84,6 +90,8 @@ public class VisitorIteratorTest {
 	}
 	
 	//Test Null Visitor IllegalArgumentException
+	//This is tested by passing in null for Visitor object
+	//and keeping all other parameters intact
 	@Test(expected=IllegalArgumentException.class)
 	public void testNullVisitorThrowsIllegalArgumentException() {
 		//Act
@@ -95,6 +103,9 @@ public class VisitorIteratorTest {
 	// --------------------------------------------------------------
 		
 	//Test Starting Location is accessed and printed
+	//Mock and stub the generateRandomNumber method
+	//and then verify that printVisits method is called once 
+	//with correct parameters.
 	@Test
 	public void testStartVisitsPrintsFirstLocation() {
 		//Arrange
@@ -112,6 +123,9 @@ public class VisitorIteratorTest {
 	}
 	
 	//Test Other Locations are accessed and printed
+	//Mock and stub the generateRandomNumber method
+	//and then verify that printVisits method is called once for each Location
+	//with correct parameters.
 	@Test
 	public void testStartVisitsPrintsOtherLocations() {
 		//Arrange
@@ -132,6 +146,9 @@ public class VisitorIteratorTest {
 	}
 	
 	//Test Exit from a City happens correctly
+	//Mock and stub the generateRandomNumber method
+	//and then verify that printVisits method is called once for exiting the city
+	//with correct parameters.
 	@Test
 	public void testStartVisitsExits() {
 		//Arrange
@@ -148,7 +165,9 @@ public class VisitorIteratorTest {
 		Mockito.verify(printerMock, times(1)).printVisits("Exit", visitorMock, true);
 	}
 	
-	//Test Exit from a City happens correctly
+	//Test the seed is getting updated for different visitors
+	//so that a random pattern can be obtained.
+	//This is done using mocks and stubs of the RandomNumberGenerator class
 	@Test
 	public void testUpdatesSeeds() {
 		//Arrange

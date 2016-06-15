@@ -7,7 +7,9 @@ import org.junit.Test;
 
 public class CityTest {
 	
-//Test to test setters and getters for the city class
+	//Test to test setters and getters for the city class
+	//Setting a set of locations for the City class using setLocations()
+	//and then using getLocaitons() to retrieve the locations and assert both
 	@Test
 	public void testSetterGetterLocations() {
 		//Arrange

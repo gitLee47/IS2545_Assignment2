@@ -27,7 +27,9 @@ public class BloggerTest {
 		expectedLocations.clear();
 	}
 	
-	//Test the liked locations for Blogger, should be empty
+	//Test the liked locations for Blogger, should be empty.
+	//This done by calling the getVisitorLikedLocations()
+	//and comparing with an empty array.
 	@Test
 	public void testDefaultLikedLocations() {
 			
@@ -36,6 +38,8 @@ public class BloggerTest {
 	}
 	
 	//Test the setters and getters for the liked locations
+	//This done by calling the setVisitorLikedLocations()
+	//and comparing with an empty setVisitorLikedLocations()
 	@Test
 	public void testSetterandGetterLocations() {
 		//Arrange
@@ -50,6 +54,7 @@ public class BloggerTest {
 	}
 	
 	//Test the visitor type for Blogger, should return Blogger
+	//the getVisitorType() method should return the correct type
 	@Test
 	public void testVisitorType() {
 			
@@ -58,6 +63,7 @@ public class BloggerTest {
 	}
 	
 	//Test default visitor number, should return 0
+	//when calling the getVisitorNumber() method
 	@Test
 	public void testDefaultVisitorNumber() {
 			
@@ -66,6 +72,8 @@ public class BloggerTest {
 	}
 	
 	//Test visitor number cannot be negative
+	//This is done by input -1 and asserting
+	//that we don't get back -1 with getVisitorNumber()
 	@Test
 	public void testVisitorNumberDoesNotTakeNegativeInput() {
 		//Arrange
@@ -79,6 +87,8 @@ public class BloggerTest {
 	}
 	
 	//Test setting and getting a visitor number
+	//by input 100, which is valid and using the
+	//methods setVisitorNumber() and getVisitorNumber()
 	@Test
 	public void testSetterandGetterVisitorNumber() {
 		//Arrange
